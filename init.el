@@ -56,21 +56,11 @@
 ;;(epa-file-enable)
 (setq epa-pinentry-mode 'loopback)
 
-
-;;---------------------------------ESS-----------------------------------
-(add-to-list 'load-path "/Users/alex/local/ess-17.11/lisp/")
-(require 'ess-site)
-;; julia
-(setq  inferior-julia-program-name "/usr/local/bin/julia")
-;; ob-julia
-(add-to-list 'load-path "/Users/alex/local/emacs-modes/ob-julia/")
-
 ;;------------------------exec-path-from-shell---------------------------
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
 ;;------------------------------Org-mode---------------------------------
-(add-to-list 'load-path "~/local/emacs-modes/org-mode/lisp")
 (require 'org)
 
 ;;pdf view
